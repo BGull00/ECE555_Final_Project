@@ -1,0 +1,367 @@
+Dependencies for Project 'SmartFarm', Target 'SmartFarm': (DO NOT MODIFY !)
+CompilerVersion: 6190000::V6.19::ARMCLANG
+F (.\main.c)(0x6545D347)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w-I./RTE/RTOS-I./RTE/_SmartFarm-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/main.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\FreeRTOS.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x6388F1C8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x63875CE0)
+I (RTE\_SmartFarm\RTE_Components.h)(0x653F107D)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F4756)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x5510368C)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B73866)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\projdefs.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\portable.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\deprecated_definitions.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\mpu_wrappers.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\task.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\list.h)(0x63875CE0)
+I (UART.h)(0x65425CD7)
+I (esp8266.h)(0x6541A7AD)
+F (.\UART.c)(0x65425EA8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w-I./RTE/RTOS-I./RTE/_SmartFarm-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/uart.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\tm4c123gh6pm.h)(0x5510368C)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B73866)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6388F1C8)
+I (FIFO.h)(0x654192A4)
+I (UART.h)(0x65425CD7)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\FreeRTOS.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x6388F1C8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x63875CE0)
+I (RTE\_SmartFarm\RTE_Components.h)(0x653F107D)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F4756)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\projdefs.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\portable.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\deprecated_definitions.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\mpu_wrappers.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x626FF39E)
+F (.\FIFO.h)(0x654192A4)()
+F (.\UART.h)(0x65425CD7)()
+F (.\esp8266.c)(0x65431261)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w-I./RTE/RTOS-I./RTE/_SmartFarm-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/esp8266.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\tm4c123gh6pm.h)(0x5510368C)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B73866)
+I (esp8266.h)(0x6541A7AD)
+I (UART.h)(0x65425CD7)
+I (FIFO.h)(0x654192A4)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\FreeRTOS.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x6388F1C8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x63875CE0)
+I (RTE\_SmartFarm\RTE_Components.h)(0x653F107D)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F4756)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\projdefs.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\portable.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\deprecated_definitions.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\mpu_wrappers.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x626FF39E)
+F (.\esp8266.h)(0x6541A7AD)()
+F (C:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Source/ARM/clib_arm.c)(0x63875CE0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w-I./RTE/RTOS-I./RTE/_SmartFarm-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/clib_arm.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\FreeRTOS.h)(0x63875CE0)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x63875CE0)
+I (RTE\_SmartFarm\RTE_Components.h)(0x653F107D)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F4756)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x5510368C)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B73866)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\projdefs.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\portable.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\deprecated_definitions.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\mpu_wrappers.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\task.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\list.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\semphr.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\queue.h)(0x63875CE0)
+F (C:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c)(0x63875CE0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w-I./RTE/RTOS-I./RTE/_SmartFarm-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/cmsis_os2.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\cmsis_os2.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\os_tick.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\FreeRTOS.h)(0x63875CE0)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x63875CE0)
+I (RTE\_SmartFarm\RTE_Components.h)(0x653F107D)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F4756)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x5510368C)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B73866)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\projdefs.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\portable.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\deprecated_definitions.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\mpu_wrappers.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\task.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\list.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\event_groups.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\timers.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\semphr.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\queue.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include\freertos_mpool.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include\freertos_os2.h)(0x63875CE0)
+F (C:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Source/os_systick.c)(0x63875CE0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w-I./RTE/RTOS-I./RTE/_SmartFarm-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/os_systick.o -MD)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include\os_tick.h)(0x626FF39E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (RTE\_SmartFarm\RTE_Components.h)(0x653F107D)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F4756)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x5510368C)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B73866)
+F (RTE/Device/TM4C123GH6PM/startup_TM4C123.s)(0x653F19DA)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/RTOS-I./RTE/_SmartFarm-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-Wa,armasm,--pd,"__UVISION_VERSION SETA 538" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"TM4C123GH6PM SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_tm4c123.o)
+F (RTE/Device/TM4C123GH6PM/system_TM4C123.c)(0x6541AB10)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w-I./RTE/RTOS-I./RTE/_SmartFarm-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/system_tm4c123.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F4756)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x5510368C)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B73866)
+F (C:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Source/freertos_evr.c)(0x63875CE0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w-I./RTE/RTOS-I./RTE/_SmartFarm-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/freertos_evr.o -MD)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\FreeRTOS.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x63875CE0)
+I (RTE\_SmartFarm\RTE_Components.h)(0x653F107D)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F4756)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x5510368C)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B73866)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\projdefs.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\portable.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\deprecated_definitions.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\mpu_wrappers.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\task.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\list.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\semphr.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\queue.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\event_groups.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\timers.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\stream_buffer.h)(0x63875CE0)
+F (C:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/event_groups.c)(0x63875CE0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w-I./RTE/RTOS-I./RTE/_SmartFarm-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/event_groups.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\FreeRTOS.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x63875CE0)
+I (RTE\_SmartFarm\RTE_Components.h)(0x653F107D)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F4756)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x5510368C)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B73866)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\projdefs.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\portable.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\deprecated_definitions.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\mpu_wrappers.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\task.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\list.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\timers.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\event_groups.h)(0x63875CE0)
+F (C:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/list.c)(0x63875CE0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w-I./RTE/RTOS-I./RTE/_SmartFarm-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/list.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\FreeRTOS.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x63875CE0)
+I (RTE\_SmartFarm\RTE_Components.h)(0x653F107D)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F4756)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x5510368C)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B73866)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\projdefs.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\portable.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\deprecated_definitions.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\mpu_wrappers.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\list.h)(0x63875CE0)
+F (C:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F/port.c)(0x63875CE0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w-I./RTE/RTOS-I./RTE/_SmartFarm-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/port.o -MD)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\FreeRTOS.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x63875CE0)
+I (RTE\_SmartFarm\RTE_Components.h)(0x653F107D)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F4756)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x5510368C)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B73866)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\projdefs.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\portable.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\deprecated_definitions.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\mpu_wrappers.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\task.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\list.h)(0x63875CE0)
+F (C:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/MemMang/heap_4.c)(0x63875CE0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w-I./RTE/RTOS-I./RTE/_SmartFarm-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/heap_4.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\FreeRTOS.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x63875CE0)
+I (RTE\_SmartFarm\RTE_Components.h)(0x653F107D)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F4756)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x5510368C)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B73866)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\projdefs.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\portable.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\deprecated_definitions.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\mpu_wrappers.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\task.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\list.h)(0x63875CE0)
+F (C:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/queue.c)(0x63875CE0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w-I./RTE/RTOS-I./RTE/_SmartFarm-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/queue.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\FreeRTOS.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x63875CE0)
+I (RTE\_SmartFarm\RTE_Components.h)(0x653F107D)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F4756)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x5510368C)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B73866)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\projdefs.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\portable.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\deprecated_definitions.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\mpu_wrappers.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\task.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\list.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\queue.h)(0x63875CE0)
+F (C:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c)(0x63875CE0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w-I./RTE/RTOS-I./RTE/_SmartFarm-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/tasks.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\FreeRTOS.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x63875CE0)
+I (RTE\_SmartFarm\RTE_Components.h)(0x653F107D)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F4756)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x5510368C)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B73866)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\projdefs.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\portable.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\deprecated_definitions.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\mpu_wrappers.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\task.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\list.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\timers.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\stack_macros.h)(0x63875CE0)
+F (C:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/timers.c)(0x63875CE0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -w-I./RTE/RTOS-I./RTE/_SmartFarm-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/RTOS2/Include-IC:/Users/amiri/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="538" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./objects/timers.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\FreeRTOS.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x6388F1C8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6388F1C8)
+I (RTE\RTOS\FreeRTOSConfig.h)(0x63875CE0)
+I (RTE\_SmartFarm\RTE_Components.h)(0x653F107D)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123.h)(0x530F4756)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\TM4C123GH6PM.h)(0x5510368C)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FF39E)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123\system_TM4C123.h)(0x51B73866)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include\freertos_evr.h)(0x63875CE0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6388F1C8)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\projdefs.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\portable.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\deprecated_definitions.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM4F\portmacro.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\mpu_wrappers.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\task.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\list.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\queue.h)(0x63875CE0)
+I (C:\Users\amiri\AppData\Local\Arm\Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include\timers.h)(0x63875CE0)
+F (RTE/RTOS/FreeRTOSConfig.h)(0x63875CE0)()
