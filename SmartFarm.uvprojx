@@ -414,6 +414,16 @@
               <FileType>5</FileType>
               <FilePath>.\esp8266.h</FilePath>
             </File>
+            <File>
+              <FileName>Ports.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Ports.h</FilePath>
+            </File>
+            <File>
+              <FileName>Ports.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Ports.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
