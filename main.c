@@ -9,6 +9,7 @@
 
 #include "Ports.h"
 #include "UART.h"
+#include "I2C.h""
 #include "esp8266.h"
 
 
@@ -26,6 +27,7 @@ char Req_Device_Alert[] =  "POST /device/alert?message=UT%20Smart%20Farm%20High%
 
 QueueHandle_t sensor_queue_0;
 QueueHandle_t sensor_queue_1;
+QueueHandle_t sensor_queue_2;
 
 
 // RTOS-safe print string to UART
@@ -142,11 +144,50 @@ void AnalogSensorTask(void * pvParameters)
 }
 
 
+// Task used to read sensor values and put them on a shared queue
+void I2CTemperatureTask(void * pvParameters)
+{
+	int8_t error;
+	uint8_t i;
+	char data[2] = {0x00, 0x00};
+	uint16_t temperature_unconverted;
+	uint32_t temperature;
+	
+	const TickType_t delay = pdMS_TO_TICKS(1000);
+	
+	while(1)
+	{
+		error = I2C2_Read_Bytes(0x18, 0x05, 2, data);
+		
+		if(error == 0)
+		{
+			temperature_unconverted = 0;
+			temperature_unconverted |= data[1];
+			temperature_unconverted |= data[0] << 8;
+			
+			if(temperature_unconverted != 0xFFFF)
+			{
+				temperature = temperature_unconverted & 0xFFF;
+				temperature >>= 4;
+				
+				if(temperature_unconverted & 0x1000)
+					temperature -= 256;
+			
+				xQueueSendToBack(sensor_queue_2, &temperature, 0);
+			}
+			
+			vTaskDelay(delay);
+		}
+	}
+}
+
+
 // Task used to read sensor values from shared queue
 void ConsumerTask(void * pvParameters)
 {
 	uint32_t val0;
 	uint32_t val1;
+	uint32_t val2;
 	while(1)
 	{
 		// Get averaged sensor value from shared queue 0
@@ -162,6 +203,15 @@ void ConsumerTask(void * pvParameters)
 			xQueueReceive(sensor_queue_1, &val1, 0);
 			RTOS_Print_Int("Val From Queue 1 : ", val1);
 		}
+		
+		// Get averaged sensor value from shared queue 2
+		if(uxQueueMessagesWaiting(sensor_queue_2) > 0)
+		{
+			xQueueReceive(sensor_queue_2, &val2, 0);
+			RTOS_Print_Int("Val From Queue 2 : ", val2);
+		}
+		
+		// Send sensor data to server using ESP
 		SendSensorData(val0, val1);
 		if(val0>30){
 			SendAlert();
@@ -188,9 +238,13 @@ int main(void)
 	ADC0_Init();
 	ADC1_Init();
 	
+	// Init I2C2
+	I2C2_Init();
+	
 	// Create one queue per sensor to place sensor data (allows another thread to read sensor data)
 	sensor_queue_0 = xQueueCreate(10, sizeof(uint32_t));
 	sensor_queue_1 = xQueueCreate(10, sizeof(uint32_t));
+	sensor_queue_2 = xQueueCreate(10, sizeof(uint32_t));
 	
 	// Create a thread for each task
 	//xTaskCreate(BlinkerTask, "Blinker", 256, NULL, 1, NULL);
@@ -198,6 +252,7 @@ int main(void)
 	//xTaskCreate(WifiTask, "Blinker", 256, NULL, 1, NULL);
 	xTaskCreate(AnalogSensorTask, "Sensor0", 256, (void *) 0, 1, NULL);
 	xTaskCreate(AnalogSensorTask, "Sensor1", 256, (void *) 1, 1, NULL);
+	xTaskCreate(I2CTemperatureTask, "Sensor2", 256, NULL, 1, NULL);
 	xTaskCreate(ConsumerTask, "Consumer", 256, NULL, 1, NULL);
 	
 	// Startup of the FreeRTOS scheduler.  The program should block here.
