@@ -2,6 +2,7 @@
 ".\objects\main.o"
 ".\objects\uart.o"
 ".\objects\esp8266.o"
+".\objects\ports.o"
 ".\objects\clib_arm.o"
 ".\objects\cmsis_os2.o"
 ".\objects\os_systick.o"

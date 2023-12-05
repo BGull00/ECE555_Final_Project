@@ -18,7 +18,10 @@ long StartCritical (void);    // previous I bit, disable interrupts
 void EndCritical(long sr);    // restore I bit to previous value
 void WaitForInterrupt(void);  // low power mode
 
-char Fetch[] = "GET /data/2.5/weather?q=Lexington&APPID=040bcc5b3b26a3d46897ea9cec5d76d0 HTTP/1.1\r\nHost:api.openweathermap.org\r\n\r\n";
+uint32_t Server_Port=8000;
+char Server_Addr[] = "10.0.0.30";
+char Req_Device_Log[] =  "POST /device/log?temperature=%i&humidity=%i HTTP/1.1\r\nHost:10.0.0.30\r\n\r\n";
+char Req_Device_Alert[] =  "POST /device/alert?message=UT%20Smart%20Farm%20High%20Temperature%21Alert HTTP/1.1\r\nHost:10.0.0.30\r\n\r\n";
 
 
 QueueHandle_t sensor_queue_0;
@@ -85,34 +88,27 @@ void UARTTask(void *pvParameters)
 	}
 }
 
+void HTTP_Request(char * addr,uint32_t port, char * buffer){
+	ESP8266_Init(115200);
+  //ESP8266_GetVersionNumber();
+	 
+	if(ESP8266_MakeTCPConnection(addr,port)){ // open socket in server
+		ESP8266_SendTCP(buffer);
+	}
+	ESP8266_CloseTCPConnection();
+}
 
-void WifiTask(void *pvParameters)
+void SendSensorData(uint32_t temperature, uint32_t humidity)
 {
-	char data;
-	
-	const TickType_t xDelay = pdMS_TO_TICKS(5); //5ms delay
-	TickType_t xLastWakeTime = xTaskGetTickCount();
-	
-	
-  ESP8266_Init(115200);
-  ESP8266_GetVersionNumber();
-	while(1){
-		
-    while(1){// wait for touch
-			vTaskDelayUntil(&xLastWakeTime, xDelay);
-				data = UART_InCharNonBlock();
-				if(data==0){
-					continue;
-				}
-				
-				ESP8266_GetStatus();
-				if(ESP8266_MakeTCPConnection("api.openweathermap.org")){ // open socket in server
-						ESP8266_SendTCP(Fetch);
-					}
-				ESP8266_CloseTCPConnection();
-			}
-}}
+	char temp_buff[200];
+	sprintf(temp_buff, Req_Device_Log, temperature, humidity);
+	HTTP_Request(Server_Addr, Server_Port, temp_buff);
+}
 
+void SendAlert()
+{
+	HTTP_Request(Server_Addr, Server_Port, Req_Device_Alert);
+}
 
 // Task used to read sensor values and put them on a shared queue
 void AnalogSensorTask(void * pvParameters)
@@ -165,6 +161,10 @@ void ConsumerTask(void * pvParameters)
 		{
 			xQueueReceive(sensor_queue_1, &val1, 0);
 			RTOS_Print_Int("Val From Queue 1 : ", val1);
+		}
+		SendSensorData(val0, val1);
+		if(val0>30){
+			SendAlert();
 		}
 	}
 }

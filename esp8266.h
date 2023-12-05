@@ -103,7 +103,7 @@ int ESP8266_GetIPAddress(void);
 // Establish TCP connection
 // Input: IP address or web page as a string
 // output: 1 if success, 0 if fail
-int ESP8266_MakeTCPConnection(char *IPaddress);
+int ESP8266_MakeTCPConnection(char *IPaddress, uint32_t Port);
 
 //---------ESP8266_SendTCP----------
 // Send a TCP packet to server

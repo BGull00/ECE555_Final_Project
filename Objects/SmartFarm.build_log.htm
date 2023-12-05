@@ -21,30 +21,31 @@ Target DLL:      lmidk-agdi.dll V???
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-C:\Users\amiri\Desktop\EmbeddedSystems\FinalProject\SmartFarm.uvprojx
-Project File Date:  11/01/2023
+C:\Users\amiri\Documents\GitHub\ECE555_Final_Project\SmartFarm.uvprojx
+Project File Date:  12/04/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'SmartFarm'
 compiling os_systick.c...
-compiling UART.c...
-assembling startup_TM4C123.s...
+compiling Ports.c...
 compiling clib_arm.c...
 compiling main.c...
+compiling UART.c...
 compiling esp8266.c...
+assembling startup_TM4C123.s...
 compiling system_TM4C123.c...
 compiling freertos_evr.c...
-compiling list.c...
 compiling cmsis_os2.c...
 compiling port.c...
+compiling list.c...
 compiling event_groups.c...
 compiling heap_4.c...
-compiling queue.c...
 compiling timers.c...
+compiling queue.c...
 compiling tasks.c...
 linking...
-Program Size: Code=23664 RO-data=1776 RW-data=140 ZI-data=16976  
+Program Size: Code=24308 RO-data=1788 RW-data=216 ZI-data=16984  
 ".\Objects\SmartFarm.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -93,12 +94,12 @@ Package Vendor: Keil
 
    * Component: ARM.FreeRTOS::RTOS:Core:Cortex-M:10.5.1
       Source file:   Source/tasks.c
+      Include file:  Source/include/semphr.h
+      Source file:   Source/queue.c
       Include file:  Source/include/queue.h
       Include file:  Source/include/FreeRTOS.h
-      Include file:  Source/include/semphr.h
-      Include file:  Source/include/task.h
-      Source file:   Source/queue.c
       Source file:   Source/list.c
+      Include file:  Source/include/task.h
       Source file:   Source/portable/GCC/ARM_CM4F/port.c
       Source file:   CMSIS/RTOS2/FreeRTOS/Source/freertos_evr.c
 
@@ -110,8 +111,8 @@ Package Vendor: Keil
       Source file:   Source/portable/MemMang/heap_4.c
 
    * Component: ARM.FreeRTOS::RTOS:Timers:10.5.1
-      Include file:  Source/include/timers.h
       Source file:   Source/timers.c
+      Include file:  Source/include/timers.h
 
    * Component: ARM::CMSIS:CORE:5.6.0
 
@@ -122,10 +123,10 @@ Package Vendor: Keil
       Source file:   CMSIS/RTOS2/FreeRTOS/Source/os_systick.c
 
    * Component: Keil::Device:Startup:1.0.1
-      Source file:   Device/Source/system_TM4C123.c
       Include file:  Device/Include/TM4C123/TM4C123.h
+      Source file:   Device/Source/system_TM4C123.c
       Source file:   Device/Source/ARM/startup_TM4C123.s
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>
