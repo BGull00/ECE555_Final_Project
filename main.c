@@ -27,7 +27,6 @@ char Req_Device_Alert[] =  "POST /device/alert?message=UT%20Smart%20Farm%20High%
 
 QueueHandle_t sensor_queue_0;
 QueueHandle_t sensor_queue_1;
-QueueHandle_t sensor_queue_2;
 
 
 // RTOS-safe print string to UART
@@ -122,22 +121,10 @@ void AnalogSensorTask(void * pvParameters)
 	
 	while(1)
 	{
-		if(pvParameters == 0)
-		{
-			val = ADC0_In();
-		} else
-		{
-			val = ADC1_In();
-		}
+		val = ADC0_In();
 		
 		// Put averaged sensor value on queue
-		if(pvParameters == 0)
-		{
-			xQueueSendToBack(sensor_queue_0, &val, 0);
-		} else
-		{
-			xQueueSendToBack(sensor_queue_1, &val, 0);
-		}
+		xQueueSendToBack(sensor_queue_0, &val, 0);
 		
 		vTaskDelay(delay);
 	}
@@ -173,7 +160,7 @@ void I2CTemperatureTask(void * pvParameters)
 				if(temperature_unconverted & 0x1000)
 					temperature -= 256;
 			
-				xQueueSendToBack(sensor_queue_2, &temperature, 0);
+				xQueueSendToBack(sensor_queue_1, &temperature, 0);
 			}
 			
 			vTaskDelay(delay);
@@ -204,13 +191,6 @@ void ConsumerTask(void * pvParameters)
 			RTOS_Print_Int("Val From Queue 1 : ", val1);
 		}
 		
-		// Get averaged sensor value from shared queue 2
-		if(uxQueueMessagesWaiting(sensor_queue_2) > 0)
-		{
-			xQueueReceive(sensor_queue_2, &val2, 0);
-			RTOS_Print_Int("Val From Queue 2 : ", val2);
-		}
-		
 		// Send sensor data to server using ESP
 		SendSensorData(val0, val1);
 		if(val0>30){
@@ -236,7 +216,6 @@ int main(void)
 	
 	// Init PortE for ADC0 and ADC1 input sensors
 	ADC0_Init();
-	ADC1_Init();
 	
 	// Init I2C2
 	I2C2_Init();
@@ -244,7 +223,6 @@ int main(void)
 	// Create one queue per sensor to place sensor data (allows another thread to read sensor data)
 	sensor_queue_0 = xQueueCreate(10, sizeof(uint32_t));
 	sensor_queue_1 = xQueueCreate(10, sizeof(uint32_t));
-	sensor_queue_2 = xQueueCreate(10, sizeof(uint32_t));
 	
 	// Create a thread for each task
 	//xTaskCreate(BlinkerTask, "Blinker", 256, NULL, 1, NULL);
