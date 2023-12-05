@@ -305,7 +305,7 @@ void ESP8266SendCommand(const char* inputString){
 void DelayMs(uint32_t n){
   volatile uint32_t time;
   while(n){
-    time = 6665;  // 1msec, tuned at 80 MHz
+    time = 3000;  // 1msec, tuned at 80 MHz
     while(time){
       time--;
     }
@@ -315,7 +315,7 @@ void DelayMs(uint32_t n){
 void DelayMsSearching(uint32_t n){
   volatile uint32_t time;
   while(n){
-    time = 4065;  // 1msec, tuned at 80 MHz
+    time = 3065;  // 1msec, tuned at 80 MHz
     while(time){
       time--;
       if(SearchFound) return;
@@ -522,13 +522,13 @@ int ESP8266_GetIPAddress(void){
 // Establish TCP connection
 // Input: IP address or web page as a string
 // output: 1 if success, 0 if fail
-int ESP8266_MakeTCPConnection(char *IPaddress){
+int ESP8266_MakeTCPConnection(char *IPaddress, uint32_t Port){
   int try=MAXTRY;
   SearchStart("ok");
   while(try){
-    sprintf((char*)TXBuffer, "AT+CIPSTART=\"TCP\",\"%s\",80\r\n", IPaddress);
+    sprintf((char*)TXBuffer, "AT+CIPSTART=\"TCP\",\"%s\",%i\r\n", IPaddress,Port);
     ESP8266SendCommand(TXBuffer);   // open and connect to a socket
-    DelayMsSearching(8000);
+    DelayMsSearching(1000);
     if(SearchFound) return 1; // success
     try--;
   }
@@ -546,7 +546,7 @@ int ESP8266_SendTCP(char* fetch){
   DelayMs(50);
   ESP8266SendCommand(fetch);
   ServerResponseSearchStart();
-  n = 8000;
+  n = 500;
   while(n&&(ServerResponseSearchFinished==0)){
     time = (75825*8)/91;  // 1msec, tuned at 80 MHz
     while(time){
@@ -567,7 +567,7 @@ int ESP8266_CloseTCPConnection(void){
   SearchStart("ok");
   while(try){
     ESP8266SendCommand("AT+CIPCLOSE\r\n");
-    DelayMsSearching(4000);
+    DelayMsSearching(500);
     if(SearchFound) return 1; // success
     try--;
   }
@@ -599,7 +599,7 @@ int ESP8266_GetStatus(void){
   SearchStart("ok");
   while(try){
     ESP8266SendCommand("AT+CIPSTATUS\r\n");
-    DelayMsSearching(5000);
+    DelayMsSearching(1000);
     if(SearchFound) return 1; // success
     try--;
   }
