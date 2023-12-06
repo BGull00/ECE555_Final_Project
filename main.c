@@ -20,9 +20,9 @@ void EndCritical(long sr);    // restore I bit to previous value
 void WaitForInterrupt(void);  // low power mode
 
 uint32_t Server_Port=8000;
-char Server_Addr[] = "10.0.0.30";
+char Server_Addr[] = "172.20.10.6";
 char Req_Device_Log[] =  "POST /device/log?temperature=%i&humidity=%i HTTP/1.1\r\nHost:10.0.0.30\r\n\r\n";
-char Req_Device_Alert[] =  "POST /device/alert?message=UT%20Smart%20Farm%20High%20Temperature%21Alert HTTP/1.1\r\nHost:10.0.0.30\r\n\r\n";
+char Req_Device_Alert[] =  "POST /device/alert?message=%s HTTP/1.1\r\nHost:10.0.0.30\r\n\r\n";
 
 
 QueueHandle_t sensor_queue_0;
@@ -106,22 +106,31 @@ void SendSensorData(uint32_t temperature, uint32_t humidity)
 	HTTP_Request(Server_Addr, Server_Port, temp_buff);
 }
 
-void SendAlert()
+void SendAlert(char * message)
 {
-	HTTP_Request(Server_Addr, Server_Port, Req_Device_Alert);
+	char temp_buff[200];
+	sprintf(temp_buff, Req_Device_Alert, message);
+	HTTP_Request(Server_Addr, Server_Port, temp_buff);
 }
 
 // Task used to read sensor values and put them on a shared queue
+const uint32_t MAX_MOISTURE = 2840;
+const uint32_t MIN_MOISTURE = 1280;
 void AnalogSensorTask(void * pvParameters)
 {
 	uint8_t i;
+	uint32_t reading;
 	uint32_t val;
 	
-	const TickType_t delay = pdMS_TO_TICKS(1000);
+	const TickType_t delay = pdMS_TO_TICKS(10000);
 	
 	while(1)
 	{
-		val = ADC0_In();
+		reading = ADC0_In();
+		if(reading < MIN_MOISTURE) val = 100;
+		else if(reading > MAX_MOISTURE) val = 0;
+		else
+			val = 100 - 100 * (reading-MIN_MOISTURE) / (MAX_MOISTURE-MIN_MOISTURE);
 		
 		// Put averaged sensor value on queue
 		xQueueSendToBack(sensor_queue_0, &val, 0);
@@ -138,9 +147,9 @@ void I2CTemperatureTask(void * pvParameters)
 	uint8_t i;
 	char data[2] = {0x00, 0x00};
 	uint16_t temperature_unconverted;
-	uint32_t temperature;
+	int32_t temperature;
 	
-	const TickType_t delay = pdMS_TO_TICKS(1000);
+	const TickType_t delay = pdMS_TO_TICKS(10000);
 	
 	while(1)
 	{
@@ -160,10 +169,12 @@ void I2CTemperatureTask(void * pvParameters)
 				if(temperature_unconverted & 0x1000)
 					temperature -= 256;
 			
-				xQueueSendToBack(sensor_queue_1, &temperature, 0);
+				if(temperature < 70 && temperature > -100)
+				{
+					xQueueSendToBack(sensor_queue_1, &temperature, 0);
+					vTaskDelay(delay);
+				}
 			}
-			
-			vTaskDelay(delay);
 		}
 	}
 }
@@ -172,30 +183,37 @@ void I2CTemperatureTask(void * pvParameters)
 // Task used to read sensor values from shared queue
 void ConsumerTask(void * pvParameters)
 {
-	uint32_t val0;
-	uint32_t val1;
-	uint32_t val2;
+	uint32_t val_moisture;
+	uint32_t val_temperature;
 	while(1)
 	{
 		// Get averaged sensor value from shared queue 0
 		if(uxQueueMessagesWaiting(sensor_queue_0) > 0)
 		{
-			xQueueReceive(sensor_queue_0, &val0, 0);
-			RTOS_Print_Int("Val From Queue 0 : ", val0);
+			xQueueReceive(sensor_queue_0, &val_moisture, 0);
+			RTOS_Print_Int("Val From Queue 0 : ", val_moisture);
 		}
 		
 		// Get averaged sensor value from shared queue 1
 		if(uxQueueMessagesWaiting(sensor_queue_1) > 0)
 		{
-			xQueueReceive(sensor_queue_1, &val1, 0);
-			RTOS_Print_Int("Val From Queue 1 : ", val1);
+			xQueueReceive(sensor_queue_1, &val_temperature, 0);
+			RTOS_Print_Int("Val From Queue 1 : ", val_temperature);
 		}
 		
 		// Send sensor data to server using ESP
-		SendSensorData(val0, val1);
-		if(val0>30){
-			SendAlert();
+		SendSensorData(val_moisture, val_temperature);
+		if(val_temperature>24){
+			SendAlert("UT%20Smart%20Farm%20High%20Temperature%21Alert");
 		}
+		if(val_moisture<10){
+			SendAlert("UT%20Smart%20Farm%20-%20Low%20Moisture%20Detected%21");
+		}
+		if(val_moisture>90){
+			SendAlert("UT%20Smart%20Farm%20-%20High%20Moisture%20Detected%21");
+		}		
+		
+	
 	}
 }
 
@@ -221,16 +239,15 @@ int main(void)
 	I2C2_Init();
 	
 	// Create one queue per sensor to place sensor data (allows another thread to read sensor data)
-	sensor_queue_0 = xQueueCreate(10, sizeof(uint32_t));
-	sensor_queue_1 = xQueueCreate(10, sizeof(uint32_t));
+	sensor_queue_0 = xQueueCreate(1, sizeof(uint32_t));
+	sensor_queue_1 = xQueueCreate(1, sizeof(uint32_t));
 	
 	// Create a thread for each task
 	//xTaskCreate(BlinkerTask, "Blinker", 256, NULL, 1, NULL);
 	//xTaskCreate(UARTTask, "Blinker", 256, NULL, 1, NULL);
 	//xTaskCreate(WifiTask, "Blinker", 256, NULL, 1, NULL);
-	xTaskCreate(AnalogSensorTask, "Sensor0", 256, (void *) 0, 1, NULL);
-	xTaskCreate(AnalogSensorTask, "Sensor1", 256, (void *) 1, 1, NULL);
-	xTaskCreate(I2CTemperatureTask, "Sensor2", 256, NULL, 1, NULL);
+	xTaskCreate(AnalogSensorTask, "Sensor0", 256, NULL, 1, NULL);
+	xTaskCreate(I2CTemperatureTask, "Sensor1", 256, NULL, 1, NULL);
 	xTaskCreate(ConsumerTask, "Consumer", 256, NULL, 1, NULL);
 	
 	// Startup of the FreeRTOS scheduler.  The program should block here.

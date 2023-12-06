@@ -43,8 +43,8 @@ ESP8266    TM4C123
 #include <cmsis_os2.h>
 
 // Access point parameters
-#define SSID_NAME  "amirivojdan"
-#define PASSKEY    "1234567"
+#define SSID_NAME  "BrysonPhone"
+#define PASSKEY    "cjza2m4di2qej"
 //#define SEC_TYPE   ESP8266_ENCRYPT_MODE_WPA2_PSK
 
 #define BUFFER_SIZE 1024
@@ -528,7 +528,7 @@ int ESP8266_MakeTCPConnection(char *IPaddress, uint32_t Port){
   while(try){
     sprintf((char*)TXBuffer, "AT+CIPSTART=\"TCP\",\"%s\",%i\r\n", IPaddress,Port);
     ESP8266SendCommand(TXBuffer);   // open and connect to a socket
-    DelayMsSearching(1000);
+    DelayMsSearching(500);
     if(SearchFound) return 1; // success
     try--;
   }
@@ -546,7 +546,7 @@ int ESP8266_SendTCP(char* fetch){
   DelayMs(50);
   ESP8266SendCommand(fetch);
   ServerResponseSearchStart();
-  n = 500;
+  n = 400;
   while(n&&(ServerResponseSearchFinished==0)){
     time = (75825*8)/91;  // 1msec, tuned at 80 MHz
     while(time){
