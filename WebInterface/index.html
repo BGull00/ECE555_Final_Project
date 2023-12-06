@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<body>
+<canvas id="myChart" style="width:100%;max-width:1100px"></canvas>
+
+<script>
+timestamps = [];
+tempValues = [];
+humidityValues = [];
+
+axios.get('http://127.0.0.1:8000/device/log/')
+  .then(function (response) {
+    i=0;
+    for (item of response.data){  
+      tempValues.push(item["Temperature"]);
+      humidityValues.push(item["Humidity"]);
+      timestamps.push(item["TimeStamp"]);
+    }
+
+    chart = new Chart("myChart", {
+      type: "line",
+      data: {
+        labels: timestamps,
+        datasets: [{
+          label: 'Moisture (%)',
+          fill: false,
+          lineTension: 0,
+          backgroundColor: "rgba(0,0,0,1.0)",
+          borderColor: "green",
+          data: tempValues
+        },
+        {
+          label: 'Temperature (C)',
+          fill: false,
+          lineTension: 0,
+          backgroundColor: "rgba(0,0,0,1.0)",
+          borderColor: "blue",
+          data: humidityValues
+        },
+ 
+      ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {display: true},
+        scales: {
+          yAxes: [{ticks: {min: 0, max:110}}],
+          //xAxes: [{type: 'time'}]
+        }
+      }
+    });
+
+  });
+
+  
+setInterval(myTimer, 1000);
+
+function myTimer() {
+
+  axios.get('http://127.0.0.1:8000/device/log/')
+  .then(function (response) {
+    chart.data.datasets.forEach(dataset => {
+        while (dataset.data.length > 0) {
+          dataset.data.pop();
+        }
+      });
+
+    while (chart.data.labels.length > 0) {
+          chart.data.labels.pop();
+        }
+
+   
+    for (item of response.data){  
+      chart.data.datasets[0].data.push(item["Temperature"]);
+      chart.data.datasets[1].data.push(item["Humidity"]);
+      chart.data.labels.push(item["TimeStamp"]);
+    }
+
+    chart.update();
+
+  });
+}
+
+</script>
+
+</body>
+</html>
+
+
